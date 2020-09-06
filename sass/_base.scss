@@ -56,6 +56,13 @@ so we will put our CSS Custom Properties in here
 
 }
 
+// BREAKPOINT VARIABLES (for media queries)
+$bp-largest: 75em; // 1200 px - largest breakpoint (DESKTOP FIRST Approach to media queries/responsive design)
+$bp-large: 68.75em; // 1100 px / 16px =  68.75
+$bp-medium: 56.25em; // 900 px / 16px =  56.25em;
+$bp-small: 37.5em; // 600 px / 16px =  37.5em;
+$bp-smallest: 31.25em; // 500 px / 16px =  31.25em;
+
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +77,10 @@ so we will put our CSS Custom Properties in here
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1 rem = 10px 10px/16px = 62.5% (16px default browser font size)
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {

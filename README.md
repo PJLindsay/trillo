@@ -11,6 +11,8 @@ find, generate SVG Sprites in HTML
 Change color of icon in CSS
 more advanced flexbox alignment techniques
 
+more animation (pulsating infinite)
+
 ## Install
 
 ## Configure

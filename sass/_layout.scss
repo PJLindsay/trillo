@@ -5,6 +5,13 @@
   box-shadow: var(--shadow-dark);
 
   min-height: 50rem; // for testing
+
+  // we are using DESKTOP FIRST approach
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0; // makes pink top margin disappear when we go < 1200 px (biggest)
+    max-width: 100%; // make sure pink margin doesn't come back at 1100 px (big)
+    width: 100%;
+  }
 }
 
 .header {
@@ -16,10 +23,23 @@
   display: flex;
   justify-content: space-between; // alignment along main axis
   align-items: center; // alignment along cross axis (vertically)
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap; // make search bar wrap to a new row (we will change order to 1 to make it last)
+    align-content: space-around;
+    height: 11rem;
+  }
+
 }
 
 .content {
   display: flex;
+
+    // we are using DESKTOP FIRST approach
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column; // move nav to top to give more room
+    }
+
 }
 
 .sidebar {
@@ -46,6 +66,17 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
+
+  // we are using DESKTOP FIRST approach
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  // make reviews stack up (vertically) when we run low on screen width
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
 }
 
 .description {
@@ -54,6 +85,19 @@
   padding: 3rem;
   flex: 0 0 60%; // don't grow/don't shrink take 60% of space
   margin-right: 4.5rem;
+
+    // we are using DESKTOP FIRST approach
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin-right: 3rem;
+    }
+
+    // make reviews stack up (vertically) when we run low on screen width
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
 }
 
 .user-reviews {
