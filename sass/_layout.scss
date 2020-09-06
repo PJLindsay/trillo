@@ -11,7 +11,7 @@
   font-size: 1.4rem;
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between; // alignment along main axis
@@ -34,10 +34,29 @@
 
 .hotel-view {
   background-color: var(--color-white);
-
-  // TEST
-  height: 80rem; // pretend there's lots of content in this div
+  // height: 80rem; // TEST: pretend there's lots of content in this div
 
   flex: 1; // grow as much as you can (use all available space)
 
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%; // don't grow/don't shrink take 60% of space
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1; // take remaining space (40%)
 }
