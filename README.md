@@ -1,6 +1,6 @@
 # Trillo
 
-Advanced CSS Course
+Advanced CSS Course Project #2
 
 ## Topics
 

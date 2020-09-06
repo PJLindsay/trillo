@@ -431,17 +431,21 @@
     width: 2rem;
     margin-right: .7rem;
 
-    // Older browsers
-    // background-image: url(../img/chevron-thin-right.svg); // note we're using SVG icon in CSS (instead of HTML) -- it's difficult to work with sprites in CSS
-    // background-size: cover;
+    // Older browsers - will just show icon in black (cannot be colored w primary)
+    background-image: url(../img/chevron-thin-right.svg); // note we're using SVG icon in CSS (instead of HTML) -- it's difficult to work with sprites in CSS
+    background-size: cover;
 
-    // Newer browsers use masks make it all pink with area we can see through
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    // NEWEST BROWSERs (don't need -webkit)
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover;
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      // Newer browsers use masks make it all pink with area we can see through
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      // NEWEST BROWSERs (don't need -webkit)
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+      background-image: none; // for Safari
+    }
+
   }
 }
 
