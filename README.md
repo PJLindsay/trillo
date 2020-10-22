@@ -1,6 +1,6 @@
 # Trillo
 
-Advanced CSS Course Project #2
+Advanced CSS Course Project #2: Travel Booking Website
 
 ## Topics
 
@@ -15,5 +15,19 @@ more animation (pulsating infinite)
 
 ## Install
 
-## Configure
+Open terminal at project root and execute
+
+  $ npm install
+
+## Build
+
+Open terminal at project root and execute
+
+  $ npm run build:css
+
+## Serve
+
+Launch **development** server
+
+  $ npm start
 
